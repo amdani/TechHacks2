@@ -17,6 +17,7 @@ public class Actions implements KeyListener {
 	private String input;
 	private String action;
 	private JLabel label;
+<<<<<<< HEAD
 	private JLabel health;
 	private HashMap<String, Integer> keys;
 	private Game gameref;
@@ -26,6 +27,14 @@ public class Actions implements KeyListener {
 		
 		gameref = new Game(this);
 		playa = player;
+=======
+	private HashMap<String, Integer> keys;
+	private Game gameref;
+	
+	public Actions() throws FileNotFoundException{
+		
+		gameref = new Game(this);
+>>>>>>> c6ebc28eccdf0cef35511bbaeab7f3e3923fcd44
 		
 		keys = new HashMap<String, Integer>();
 		
@@ -37,6 +46,10 @@ public class Actions implements KeyListener {
 		}
 		in.close();
 		
+<<<<<<< HEAD
+=======
+		
+>>>>>>> c6ebc28eccdf0cef35511bbaeab7f3e3923fcd44
 	}
 	
 	public void addTextField(JTextField text){
@@ -48,6 +61,7 @@ public class Actions implements KeyListener {
 		label = labelRef;
 	}
 	
+<<<<<<< HEAD
 	/**
 	 * I added this in, make sure it's in other methods.
 	 * @param text
@@ -60,6 +74,8 @@ public class Actions implements KeyListener {
 		health = labelRef;
 	}
 	
+=======
+>>>>>>> c6ebc28eccdf0cef35511bbaeab7f3e3923fcd44
 	public void getAction(){
 		
 		for(String command : keys.keySet()){
@@ -70,6 +86,7 @@ public class Actions implements KeyListener {
 		
 	}
 	
+<<<<<<< HEAD
 	//update UI
 	public void update(){
 		//update health
@@ -77,6 +94,8 @@ public class Actions implements KeyListener {
 		health.setText(healthText);
 	}
 	
+=======
+>>>>>>> c6ebc28eccdf0cef35511bbaeab7f3e3923fcd44
 	public boolean isDirection(){
 		if (keys.get(action) == 1){
 			return true;
@@ -138,6 +157,7 @@ public class Actions implements KeyListener {
 		if(arg0.getKeyChar() == KeyEvent.VK_ENTER){
 			input = text.getText();
 			input.toLowerCase();
+<<<<<<< HEAD
 			handleInput(input);
 			//update UI here
 		}
@@ -147,6 +167,12 @@ public class Actions implements KeyListener {
 	public void handleInput(String input) {
 		
 	}
+=======
+			label.setText(input);
+		}
+		
+	}
+>>>>>>> c6ebc28eccdf0cef35511bbaeab7f3e3923fcd44
 
 	@Override
 	public void keyReleased(KeyEvent arg0) {

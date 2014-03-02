@@ -4,7 +4,11 @@ import java.io.*;
 /**
  * This class controls the game mechanics
  * 
+<<<<<<< HEAD
  * @author Steve Amatangelo
+=======
+ * @author Steve Amatangello
+>>>>>>> c6ebc28eccdf0cef35511bbaeab7f3e3923fcd44
  * @author Alexis Dani
  * @author Trever Overbeck
  * @author Zach Hill
@@ -16,12 +20,20 @@ public class Game {
 	private HashMap<String, String> description;
 	private Actions actions;
 
+<<<<<<< HEAD
 	public Game(Actions act) {
 		//implement hashmaps here
 		//implementMap();
 		//implementDescription();
 		currentLocation = "misnomer";
 		actions = act;
+=======
+	public Game(Actions act) throws FileNotFoundException {
+		//implement hashmaps here
+	/*	implementMap();
+		implementDescription();*/
+		currentLocation = "misnomer";
+>>>>>>> c6ebc28eccdf0cef35511bbaeab7f3e3923fcd44
 	}
 	
 	public void implementMap() throws FileNotFoundException {
@@ -52,7 +64,10 @@ public class Game {
 
 	public void setCurrentLocation(String loc) {
 		currentLocation = loc;
+<<<<<<< HEAD
 		actions.setLabelText(description.get(loc));
+=======
+>>>>>>> c6ebc28eccdf0cef35511bbaeab7f3e3923fcd44
 	}
 
 	public String getCurrentLocation() {
